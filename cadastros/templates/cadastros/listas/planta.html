@@ -1,0 +1,26 @@
+{% extends 'paginas/modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+<h3>Lista de Plantas</h3>
+
+<hr>
+
+<table class='table table-stripped'>
+    <tr>
+        <th>Nome Popular</th>
+        <th>Data Do Plantio</th>
+    </tr>
+    {% for planta in object_list %}
+    <tr>
+        <td>{{ planta.nome_popular }}</td>
+        <td>{{ planta.plantio</td>
+
+    </tr>
+
+    {% empty %}
+
+    {% endfor %}
+</table>
+{% endblock %}

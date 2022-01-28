@@ -1,0 +1,26 @@
+{% extends 'paginas/modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+<h3>Lista de Perfis</h3>
+
+<hr>
+
+<table class='table table-stripped'>
+    <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+    </tr>
+    {% for perfil in object_list %}
+    <tr>
+        <td>{{ perfil.nome }}</td>
+        <td>{{ perfil.sobrenome }}</td>
+
+    </tr>
+
+    {% empty %}
+
+    {% endfor %}
+</table>
+{% endblock %}
